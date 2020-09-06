@@ -11,7 +11,8 @@ class User(models.Model):
     phone = models.CharField(max_length=20)
     password = models.CharField(max_length=100)
     img_url = models.CharField(max_length=255, null=True)
-    created_at = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
 
 class Product(models.Model):
     code = models.CharField(max_length=10, unique=True)
@@ -22,15 +23,16 @@ class Product(models.Model):
     size = models.CharField(max_length=20, null=True)
     color = models.CharField(max_length=30, null=True)
     img_url = models.CharField(max_length=255, null=True)
-    created_at = models.DateField()
-    deleted_at = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    deleted_at = models.DateTimeField(auto_now_add=True)
+
 
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, default=None)
     rating = models.IntegerField()
     comment = models.CharField(max_length=255, null=True)
-    created_at = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
     
 
