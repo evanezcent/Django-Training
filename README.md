@@ -11,4 +11,19 @@
     - python manage.py makemigrations ecommerce
     - python manage.py migrate
 ````
-pip install pyjwt
+
+
+## Config Database
+
+We use **postgresql** as our database, in your `settings.py` :
+````
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Your DB name',
+        'USER': 'Your postgre username',
+        'PASSWORD': 'Your postgre password',
+        'HOST': 'localhost'
+    }
+}
+````
