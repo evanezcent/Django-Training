@@ -1,5 +1,8 @@
 # Django-Training
 
+## How to run ?
+> python manage.py runserver
+
 ## Getting Started
 
 1. Install django `python -m pip install Django`
