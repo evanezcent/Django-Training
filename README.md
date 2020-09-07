@@ -18,7 +18,7 @@
 
 ## Config Database
 
-We use **postgresql** as our database, in your `settings.py` :
+We use [**postgresql**](https://www.postgresql.org/) as our database, in your `settings.py` :
 ````
 DATABASES = {
     'default': {
