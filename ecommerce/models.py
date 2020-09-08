@@ -34,5 +34,15 @@ class Review(models.Model):
     comment = models.CharField(max_length=255, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, default=None)
+    total = models.IntegerField(default=None)
+
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+class ProductCategory(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=None, related_name='category_related')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, default=None, related_name='product_related')
 
