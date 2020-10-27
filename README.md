@@ -1,6 +1,6 @@
 # Django-Training
 
-## How to run ?
+## How to Run
 > python manage.py runserver
 
 ## Getting Started
