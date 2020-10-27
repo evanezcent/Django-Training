@@ -22,7 +22,7 @@ class Product(models.Model):
     stock = models.IntegerField()
     size = models.CharField(max_length=20, null=True)
     color = models.CharField(max_length=30, null=True)
-    img_url = models.CharField(max_length=255, null=True)
+    img_url = models.FileField(upload_to='product', null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     deleted_at = models.DateTimeField(auto_now_add=True)
 
