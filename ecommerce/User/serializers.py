@@ -9,3 +9,10 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__' # all field
+
+class UserProfile(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ('id', 'img_url', )
+        read_only_fields = ('id', )

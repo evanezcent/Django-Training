@@ -10,7 +10,7 @@ class User(models.Model):
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=20)
     password = models.CharField(max_length=100)
-    img_url = models.CharField(max_length=255, null=True)
+    img_url = models.FileField(upload_to='user', null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
