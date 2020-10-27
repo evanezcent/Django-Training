@@ -6,4 +6,3 @@ from .serializers import ProductCategorySerializer
 class ProductCategoryViewset(viewsets.ModelViewSet):
     queryset = ProductCategory.objects.all()
     serializer_class = ProductCategorySerializer
-
