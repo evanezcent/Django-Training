@@ -1,4 +1,5 @@
 # Django-Training
+A hands on project to learn RESTful API using **Django** and **PostgreeSQL**
 
 ## How to Run
 > python manage.py runserver
